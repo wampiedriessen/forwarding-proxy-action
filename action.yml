@@ -1,0 +1,12 @@
+name: 'Topicus Forwarding Proxy for Github Actions'
+description: 'Allow adding an (api token) header to requests'
+inputs:
+  api_key_header:
+    description: 'The header name'
+    required: true
+  api_key_value:
+    description: 'The header value'
+    required: true
+runs:
+  using: 'node12'
+  main: 'server.js'
