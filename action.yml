@@ -17,5 +17,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    # Powershell and bash/sh seem to handle this identically (lucky)
-    - run: node dist/index.js &
+    - run: node $GITHUB_ACTION_PATH/dist/index.js &
+      shell: bash
