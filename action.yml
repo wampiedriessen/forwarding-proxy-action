@@ -17,5 +17,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: node $GITHUB_ACTION_PATH/dist/index.js &
+    - run: |
+        export API_KEY_HEADER="${{ inputs.api_key_header }}";
+        export API_KEY_VALUE="${{ inputs.api_key_value }}";
+        export PROXY_TO="${{ inputs.proxy_to }}";
+        export PROXY_PORT="${{ inputs.proxy_port }}";
+        node $GITHUB_ACTION_PATH/dist/index.js &
       shell: bash
