@@ -15,5 +15,7 @@ inputs:
     required: false
     default: 8080
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "composite"
+  steps:
+    # Powershell and bash/sh seem to handle this identically (lucky)
+    - run: node dist/index.js &
