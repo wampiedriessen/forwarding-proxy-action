@@ -13,7 +13,11 @@ inputs:
   proxy_port:
     description: 'The port on localhost this proxy binds to'
     required: false
-    default: 8080
+    default: '8080'
+outputs:
+  proxy_location:
+    description: "The URL this proxy can be found at"
+    value: "http://localhost:${{ inputs.proxy_port }}/"
 runs:
   using: "composite"
   steps:
