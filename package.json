@@ -1,14 +1,14 @@
 {
   "name": "forwarding-proxy-action",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "dependencies": {
     "http-proxy": "^1.18.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
