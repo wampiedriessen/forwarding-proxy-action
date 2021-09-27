@@ -26,5 +26,7 @@ var server = http.createServer(function(req, res) {
   console.log("Request handled!")
 });
 
-console.log("listening on port 8080")
-server.listen(process.env.PROXY_PORT || 8080);
+var port = process.env.PROXY_PORT || 8080;
+
+console.log("listening on port " + port)
+server.listen(port);
