@@ -16,4 +16,4 @@ inputs:
     default: 8080
 runs:
   using: 'node12'
-  main: 'server.js'
+  main: 'dist/server.js'
