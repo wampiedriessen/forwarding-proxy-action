@@ -19,7 +19,7 @@ var server = http.createServer(function(req, res) {
   // You can define here your custom logic to handle the request
   // and then proxy the request.
   proxy.web(req, res, {
-    target: 'https://octopusdeploy.topicuszorg.nl'
+    target: process.env.PROXY_TO
   });
 
   
@@ -27,4 +27,4 @@ var server = http.createServer(function(req, res) {
 });
 
 console.log("listening on port 8080")
-server.listen(8080);
+server.listen(process.env.PROXY_PORT || 8080);
