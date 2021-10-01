@@ -7,9 +7,6 @@ inputs:
   api_key_value:
     description: 'The header value'
     required: true
-  proxy_to:
-    description: 'Where to proxy to'
-    required: true
   proxy_port:
     description: 'The port on localhost this proxy binds to'
     required: false
