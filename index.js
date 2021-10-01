@@ -2,9 +2,6 @@ var httpProxy = require('http-proxy');
 var net = require('net');
 var http = require('http');
 
-let headers = {};
-headers[process.env.API_KEY_HEADER] = process.env.API_KEY_VALUE;
-
 var port = process.env.PROXY_PORT || 8080;
 console.log("listening on port " + port)
 
@@ -24,6 +21,10 @@ function logRequest(req)
 }
 
 var regularProxy = new httpProxy.createProxyServer();
+
+regularProxy.on('proxyReq', function(proxyReq, req, res, options) {
+    proxyReq.setHeader(process.env.API_KEY_HEADER, process.env.API_KEY_VALUE);
+});
 
 var server = http.createServer();
 

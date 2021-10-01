@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 887:
+/***/ 314:
 /***/ ((module) => {
 
 "use strict";
@@ -345,7 +345,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 347:
+/***/ 54:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var debug;
@@ -354,7 +354,7 @@ module.exports = function () {
   if (!debug) {
     try {
       /* eslint global-require: off */
-      debug = __nccwpck_require__(533)("follow-redirects");
+      debug = __nccwpck_require__(461)("follow-redirects");
     }
     catch (error) { /* */ }
     if (typeof debug !== "function") {
@@ -367,16 +367,16 @@ module.exports = function () {
 
 /***/ }),
 
-/***/ 295:
+/***/ 420:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var url = __nccwpck_require__(835);
 var URL = url.URL;
 var http = __nccwpck_require__(605);
 var https = __nccwpck_require__(211);
-var Writable = __nccwpck_require__(794).Writable;
+var Writable = __nccwpck_require__(413).Writable;
 var assert = __nccwpck_require__(357);
-var debug = __nccwpck_require__(347);
+var debug = __nccwpck_require__(54);
 
 // Create handlers that pass events from native requests
 var events = ["abort", "aborted", "connect", "error", "socket", "timeout"];
@@ -912,7 +912,7 @@ module.exports.wrap = wrap;
 
 /***/ }),
 
-/***/ 762:
+/***/ 1:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /*!
@@ -927,15 +927,15 @@ module.exports.wrap = wrap;
  *          Dante - The Divine Comedy (Canto III)
  */
 
-module.exports = __nccwpck_require__(58);
+module.exports = __nccwpck_require__(3);
 
 /***/ }),
 
-/***/ 58:
+/***/ 3:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
  // Use explicit /index.js to help browserify negociation in require '/lib/http-proxy' (!)
-var ProxyServer = __nccwpck_require__(133).Server;
+var ProxyServer = __nccwpck_require__(423).Server;
 
 
 /**
@@ -1004,13 +1004,13 @@ module.exports = ProxyServer;
 
 /***/ }),
 
-/***/ 348:
+/***/ 972:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 var common   = exports,
     url      = __nccwpck_require__(835),
     extend   = __nccwpck_require__(669)._extend,
-    required = __nccwpck_require__(413);
+    required = __nccwpck_require__(15);
 
 var upgradeHeader = /(^|,)\s*upgrade\s*($|,)/i,
     isSSL = /^https|wss/;
@@ -1259,17 +1259,17 @@ function hasPort(host) {
 
 /***/ }),
 
-/***/ 133:
+/***/ 423:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var httpProxy = module.exports,
     extend    = __nccwpck_require__(669)._extend,
     parse_url = __nccwpck_require__(835).parse,
-    EE3       = __nccwpck_require__(887),
+    EE3       = __nccwpck_require__(314),
     http      = __nccwpck_require__(605),
     https     = __nccwpck_require__(211),
-    web       = __nccwpck_require__(948),
-    ws        = __nccwpck_require__(891);
+    web       = __nccwpck_require__(928),
+    ws        = __nccwpck_require__(834);
 
 httpProxy.Server = ProxyServer;
 
@@ -1451,14 +1451,14 @@ ProxyServer.prototype.after = function(type, passName, callback) {
 
 /***/ }),
 
-/***/ 948:
+/***/ 928:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var httpNative   = __nccwpck_require__(605),
     httpsNative  = __nccwpck_require__(211),
-    web_o  = __nccwpck_require__(452),
-    common = __nccwpck_require__(348),
-    followRedirects = __nccwpck_require__(295);
+    web_o  = __nccwpck_require__(286),
+    common = __nccwpck_require__(972),
+    followRedirects = __nccwpck_require__(420);
 
 web_o = Object.keys(web_o).map(function(pass) {
   return web_o[pass];
@@ -1652,11 +1652,11 @@ module.exports = {
 
 /***/ }),
 
-/***/ 452:
+/***/ 286:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var url    = __nccwpck_require__(835),
-    common = __nccwpck_require__(348);
+    common = __nccwpck_require__(972);
 
 
 var redirectRegex = /^201|30(1|2|7|8)$/;
@@ -1806,12 +1806,12 @@ module.exports = { // <--
 
 /***/ }),
 
-/***/ 891:
+/***/ 834:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var http   = __nccwpck_require__(605),
     https  = __nccwpck_require__(211),
-    common = __nccwpck_require__(348);
+    common = __nccwpck_require__(972);
 
 /*!
  * Array of passes.
@@ -1975,7 +1975,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 413:
+/***/ 15:
 /***/ ((module) => {
 
 "use strict";
@@ -2021,7 +2021,7 @@ module.exports = function required(port, protocol) {
 
 /***/ }),
 
-/***/ 533:
+/***/ 461:
 /***/ ((module) => {
 
 module.exports = eval("require")("debug");
@@ -2061,7 +2061,7 @@ module.exports = require("net");
 
 /***/ }),
 
-/***/ 794:
+/***/ 413:
 /***/ ((module) => {
 
 "use strict";
@@ -2126,12 +2126,9 @@ module.exports = require("util");
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-var httpProxy = __nccwpck_require__(762);
+var httpProxy = __nccwpck_require__(1);
 var net = __nccwpck_require__(631);
 var http = __nccwpck_require__(605);
-
-let headers = {};
-headers[process.env.API_KEY_HEADER] = process.env.API_KEY_VALUE;
 
 var port = process.env.PROXY_PORT || 8080;
 console.log("listening on port " + port)
@@ -2152,6 +2149,10 @@ function logRequest(req)
 }
 
 var regularProxy = new httpProxy.createProxyServer();
+
+regularProxy.on('proxyReq', function(proxyReq, req, res, options) {
+    proxyReq.setHeader(process.env.API_KEY_HEADER, process.env.API_KEY_VALUE);
+});
 
 var server = http.createServer();
 
